@@ -1,0 +1,23 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+         Scanner obj=new Scanner(System.in);
+    int a=obj.nextInt();
+        int b,c;
+        b=a/10;
+        c=b+a;
+        System.out.println(c);
+        int d=(c*100)/12;
+    System.out.println(d/100F);
+
+        
+        
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
