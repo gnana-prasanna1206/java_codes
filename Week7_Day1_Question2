@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class NthOccurence {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Read the paragraph contents
+        String paragraph = scanner.nextLine();
+
+        // Read the word and N
+        String[] input = scanner.nextLine().split(" ");
+        String word = input[0];
+        int n = Integer.parseInt(input[1]);
+
+        // Check for invalid input
+        if (n <= 0) {
+            System.out.println("Incorrect Input");
+            return;
+        }
+
+        // Find the starting index of the Nth occurrence of the word
+        int count = 0;
+        int index = -1;
+        do {
+            index = paragraph.indexOf(word, index + 1);
+            if (index != -1) {
+                count++;
+            }
+        } while (count < n && index != -1);
+
+        if (index == -1) {
+            System.out.println("Not Present");
+        } else {
+            System.out.println(index);
+        }
+    }
+}
+
+    
